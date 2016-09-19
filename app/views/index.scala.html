@@ -1,0 +1,17 @@
+@import com.cschuszter.models.MyEntity
+@(message: String, entities: java.util.List[MyEntity])
+<html>
+    <head><title>Hello Play / Gradle</title></head>
+
+    <body>
+        <h2>@message</h2>
+
+        @if(entities != null) {
+            <ul>
+            @entities.map { entity =>
+                <li>@entity.getName()</li>
+            }
+            </ul>
+        }
+    </body>
+</html>

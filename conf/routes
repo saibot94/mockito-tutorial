@@ -1,0 +1,4 @@
+# App controller test
+GET     /               @controllers.AppController.index()
+
+GET     /entities       @controllers.AppController.entities(json: Boolean ?= false)
